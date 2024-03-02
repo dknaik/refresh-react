@@ -1,11 +1,11 @@
-import React from "react";
+import React, { memo } from "react";
 
-const Button = (props) => {
-  console.log(props);
+const Button =memo((props) => {
+  console.log("rendering button")
   const { children, handleClick, data } = props;
   const clickHandler = () => {
     console.log("handle click");
-    handleClick?.(props.data);
+    handleClick?.();
   
   };
   console.log("data", data);
@@ -14,6 +14,6 @@ const Button = (props) => {
       <button onClick={clickHandler}>{children}</button>+{data?.a?.b?.c}
     </>
   );
-};
+});
 
 export default Button;
