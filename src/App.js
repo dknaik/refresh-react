@@ -49,10 +49,12 @@ function App() {
         Click Me
       </Button>
 
-      <div>Render data and importanc of keys</div>
+      <div>Render data and importanc of keys </div>
       {data.map((val, index) => (
         <Text text={val.text} key={val.id}></Text>
       ))}
+
+      <div>React hooks</div>
     </div>
   );
 }
